@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+body.fade-in-page {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.part1 {
+  overflow: hidden;
+}
+
+.header {
+  background: #fff;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  height: 80px;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.introph {
+  display: flex;
+  width: 1500px;
+  height: 1000px;
+  position: relative;
+  text-align: center;
+}
+
+.introph p {
+  position: absolute;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.641);
+  padding: 0;
+  margin: 0;
+}
+
+.tate {
+  writing-mode: vertical-lr;
+  font-size: 8.5rem;
+  font-weight: 100;
+  font-family: 'AB-suzume';
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+}
+
+.tate.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+.question {
+  margin-top: 250px;
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.itibu {
+  font-weight: bold;
+  color: red;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.itibu.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ambulance {
+  margin: 24px 0 100px 0;
+  transition: transform 4s ease-in-out;
+  transform: translateX(300%);
+}
+
+.ambulance.show {
+  transform: translateX(39%);
+}
+
+.graph {
+  width: 100%;
+  height: 100px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 50px;
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.graph1 {
+  text-align: right;
+  background: #abff9a;
+}
+
+.graph2 {
+  text-align: right;
+  background: #9acdff;
+}
+
+.graph {
+  transform: translateX(-300%);
+  transition: transform 7s ease-in-out;
+}
+
+.graph1.show {
+  transform: translateX(0%);
+}
+
+.graph2.show {
+  transform: translateX(-50%);
+}
+
+.answer {
+  margin: 24px 0 20px 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.quotation {
+  margin: 50px 0 150px 0;
+  text-align: center;
+}
+
+.quotation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-family: 'AB-suzume';
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.quotation a:hover {
+  color: #ff6600;
+  transform: scale(1.1);
+}
+
+.part2 {
+  overflow: hidden;
+}
+
+.why {
+  text-align: center;
+  margin: 50px 0 50px 0;
+  font-size: 2.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.why-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+  font-family: 'AB-suzume';
+  margin: 0 50px 100px 50px;
+}
+
+.stress1, .stress2, .stress3 {
+  width: 500px;
+  height: 500px;
+  transition: background-image 1s ease;
+}
+
+.stress1 {
+  background-image: url('stress3.png');
+}
+
+.stress1:hover {
+  background-image: url('instress3.png');
+}
+
+.stress2 {
+  background-image: url('stress2.png');
+}
+
+.stress2:hover {
+  background-image: url('instress2.png');
+}
+
+.stress3 {
+  background-image: url('stress1.png');
+}
+
+.stress3:hover {
+  background-image: url('instress1.png');
+}
+
+.text {
+  margin: 20px 0 0 0;
+  font-size: 1.5rem;
+}
+
+.part3 {
+  overflow: hidden;
+}
+
+.counterplan {
+  margin: 50px 0 0 0;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+}
+
+.stick {
+  width: 100%;
+  height: 10px;
+}
+
+.stick1, .stick2, .stick3 {
+  background: #ffb77c;
+}
+
+.counterplan1, .counterplan2, .counterplan3 {
+  display: flex;
+  padding: 100px;
+}
+
+.counterplan1-heading, .counterplan2-heading, .counterplan3-heading {
+  margin: 0 100px 0 0;
+  line-height: 150px;
+  font-size: 7rem;
+  font-family: 'AB-suzume';
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.counterplan1-heading.visible, .counterplan2-heading.visible, .counterplan3-heading.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.counterplan1-text, .counterplan2-text, .counterplan3-text {
+  line-height: 75px;
+  font-size: 2rem;
+}
+
+.part4 {
+  overflow: visible;
+}
+
+.summary {
+  font-family: monospace;
+  color: #ffc876;
+  text-decoration-line: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 4px;
+  line-height: 200%;
+  font-size: 3rem;
+  text-align: center;
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary span {
+  --color: #ffc876;
+  position: relative;
+  clip-path: inset(0% 0);
+  opacity: 0;
+  transition: opacity 0.65s ease;
+}
+
+.summary span.active {
+  opacity: 1;
+  animation-name: shimmy, text-reveal;
+  animation-duration: 0.65s;
+  animation-delay: calc((0.5 + var(--index)) * (0.65s / 3));
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.summary span:after {
+  content: "";
+  position: absolute;
+  inset: -20% 0;
+  background-color: var(--color);
+  animation-name: block-reveal;
+  animation-duration: 0.65s;
+  animation-delay: calc((0.5 + var(--index)) * (0.65s / 3));
+  animation-fill-mode: both;
+}
+
+@keyframes shimmy {
+  0% {
+    transform: translateX(-1ch);
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    color: transparent;
+  }
+  50%, 100% {
+    color: var(--color);
+  }
+}
+
+@keyframes block-reveal {
+  0% {
+    transform: translateX(-110%);
+  }
+  45%, 55% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+.summary span:nth-of-type(1) {
+  --color: #34a853;
+  --index: 0;
+}
+
+.summary span:nth-of-type(2) {
+  --color: #fbbc05;
+  --index: 1;
+}
+
+.summary span:nth-of-type(3) {
+  --color: #ea4335;
+  --index: 2;
+}
+
+.quotationsummary {
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: 'AB-suzume';
+}
+
+.quotation {
+  line-height: 100px;
+  text-align: left;
+}
+
+.quotation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-family: 'AB-suzume';
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.quotation a:hover {
+  color: #ff6600;
+  transform: scale(1.1);
+}
